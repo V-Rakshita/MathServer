@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Server Side Processing</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function power() {
+            var current = Number(document.getElementById("t1").value);
+            var resistance = Number(document.getElementById("t2").value);
+            var pow = current * current * resistance
+            document.getElementById("power").value = pow;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <h1>Power Calculator</h1>
+            <label>Current (I):</label>
+            <input type="number" id="t1"> (in A)
+            <br><br>
+            <label>Resistance (R):</label>
+            <input type="number" id="t2"> (in Ohms)
+        </center>
+        <br><br>
+        <center>
+            <input type="button" onclick=power() value="Calculate">
+        </center>
+        <br><br>
+        <center>
+            <label>Power (in Watts):</label>
+            <input type="number" id="power">
+        </center>
+    </div>
+</body>
